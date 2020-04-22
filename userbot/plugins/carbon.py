@@ -99,11 +99,11 @@ async def carbon_api(e):
    await e.client.send_file(
          e.chat_id,
          file,
-         caption="<< `Here's your carbon!` \n **Carbonised by** [@anubisxx.](https://github.com/Dark-Princ3/X-tra-Telegram)>>\n**Colour Scheme: **`{}`".format(color_name),
+         caption="<< `Here's your carbon!` \n **Colour Scheme: **`{}`".format(color_name),
          force_document=True,
          reply_to=e.message.reply_to_msg_id,
          )
-   os.remove('./Anubis.png')
+   os.remove('./Shahanur.png')
    driver.quit()
    # Removing carbon.png after uploading
    await e.delete() # Deleting msg
