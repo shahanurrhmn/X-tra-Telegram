@@ -13,8 +13,8 @@ async def gbun(event):
     gbunVar = event.text
     gbunVar = gbunVar[6:]
     mentions = "`Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n`"
-    no_reason = "__Reason: Potential Porn Addict. __"
-    await event.edit("**Summoning out le Gungnir ❗️⚜️☠️**")
+    no_reason = "__Reason: Bachche Ki Jaan Loge Kiya. __"
+    await event.edit("**Powered by @shahanurrhmn**")
     asyncio.sleep(3.5)
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
@@ -28,18 +28,18 @@ async def gbun(event):
         idd = reply_message.from_id
         # make meself invulnerable cuz why not xD
         if idd == 742506768:
-            await reply_message.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master nigger!**\n\n__Your account has been hacked! Pay 69$ to my master__ [Anubis](tg://user?id=742506768) __to release your account__😏")
+            await reply_message.reply("`Wait a second, This is my master!`\n**How dare you threaten to ban my master!**\n\n__Your account has been hacked! Pay 69$ to my master__ [Shahanur Ali Ahmed](tg://user?id=881698860) __to release your account__😏")
         else:
             jnl=("`Warning!! `"
                   "[{}](tg://user?id={})"
                   "` 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\n\n`"
-                  "**First Name: ** __{}__\n"
+                  "**User's Name: ** __{}__\n"
                   "**ID : ** `{}`\n"
                 ).format(firstname, idd, firstname, idd)
             if usname == None:
                 jnl += "**Victim Nigga's username: ** `Doesn't own a username!`\n"
             elif usname != "None":
-                jnl += "**Victim's username** : @{}\n".format(usname)
+                jnl += "**Victim Nigga's username** : @{}\n".format(usname)
             if len(gbunVar) > 0:
                 gbunm = "`{}`".format(gbunVar)
                 gbunr = "**Reason: **"+gbunm
@@ -48,6 +48,6 @@ async def gbun(event):
                 jnl += no_reason
             await reply_message.reply(jnl)
     else:
-        mention = "`Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\nReason: Potential Porn Addict. `"
+        mention = "`Warning!! User 𝙂𝘽𝘼𝙉𝙉𝙀𝘿 By Admin...\nReason: Bachche Ki Jaan Loge Kiya. `"
         await event.reply(mention)
     await event.delete()
