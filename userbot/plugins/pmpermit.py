@@ -11,7 +11,7 @@ PREV_REPLY_MESSAGE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet, check pinned message in** @XtraTgBot"
-USER_BOT_WARN_ZERO = "`You were spamming my peru master's inbox, henceforth your retarded lame ass has been blocked by my master's userbot.` **Now GTFO, i'm playing minecraft** "
+USER_BOT_WARN_ZERO = "`Sorry for inconvenience, You are blocked for sending me further messages as you were sending too many messages without having proper authorization, For anything important please send here @Shahanur_Personal_bot.`"
 USER_BOT_NO_WARN = ("`Hey Dear, Currently I do not accept pms from strangers.But you have found your way here to me,`"
                     f"{DEFAULTUSER}'s` inbox.\n\n"
                     "Please tag me in any common group or send your messages here @Shahanur_Personal_bot`\n\n")
