@@ -8,10 +8,11 @@ from userbot.utils import admin_cmd
 
 PM_WARNS = {}
 PREV_REPLY_MESSAGE = {}
+CACHE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet, check pinned message in** @XtraTgBot"
-USER_BOT_WARN_ZERO = "`Sorry for inconvenience, You are blocked for sending me further messages as you were sending too many messages without having proper authorization, For anything important please send here @Shahanur_Personal_bot.`"
+USER_BOT_WARN_ZERO = "`Sorry for the inconvenience, You are blocked for sending me further messages as you were sending too many messages without having proper authorization, For anything important please send here @Shahanur_Personal_bot.`"
 USER_BOT_NO_WARN = ("`Hey Dear, Currently I do not accept pms from strangers.But you have found your way here to me,`"
                     f"{DEFAULTUSER}'s` inbox.\n\n"
                     "Please tag me in any common group or send your messages here @Shahanur_Personal_bot`\n\n")
@@ -48,7 +49,7 @@ if Var.PRIVATE_GROUP_ID is not None:
             if not pmpermit_sql.is_approved(chat.id):
                 if not chat.id in PM_WARNS:
                     pmpermit_sql.approve(chat.id, "outgoing")
-                    bruh = "__Added user to approved pms because of outgoing message >~<__"
+                    bruh = "__Added user to approved pms cuz outgoing message >~<__"
                     rko = await borg.send_message(event.chat_id, bruh)
                     await asyncio.sleep(3)
                     await rko.delete()
@@ -65,7 +66,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit(" Sorry for inconvenience, You are blocked for sending me further messages as you were sending too many messages without having proper authorization, For anything important please send here @Shahanur_Personal_bot.[{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit("`Sorry for inconvenience, You are blocked for sending me further messages as you were sending too many messages without having proper authorization, For anything important please send here @Shahanur_Personal_bot.`")
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
@@ -119,7 +120,11 @@ if Var.PRIVATE_GROUP_ID is not None:
             # userbot's should not reply to other userbot's
             # https://core.telegram.org/bots/faq#why-doesn-39t-my-bot-see-messages-from-other-bots
             return
-        sender = event.sender
+        if event.from_id in CACHE:
+            sender = CACHE[event.from_id]
+        else:
+            sender = await bot.get_entity(event.from_id)
+            CACHE[event.from_id] = sender
 
         if chat_id == bot.uid:
 
