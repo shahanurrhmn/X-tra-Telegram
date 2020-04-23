@@ -66,7 +66,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("`Sorry for inconvenience, You are blocked for sending me further messages as you were sending too many messages without having proper authorization, For anything important please send here @Shahanur_Personal_bot.`")
+                await event.edit("`Sorry for the inconvenience, You are blocked for sending me further messages as you were sending too many messages without having proper authorization, For anything important please send here @Shahanur_Personal_bot.`")
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
