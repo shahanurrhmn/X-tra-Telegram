@@ -5,7 +5,7 @@ Syntax: `.img <Name>` or `.img (replied message)`
 \n Upgraded and Google Image Error Fixed by @NeoMatrix90 aka @kirito6969
 """
 
-from userbot.googol_images import googleimagesdownload
+from userbot.google_images import googleimagesdownload
 import os
 import shutil
 from re import findall
@@ -21,7 +21,7 @@ async def img_sampler(event):
     elif reply:
         query = reply.message
     else:
-    	await event.edit("`um, mind mentioning what I actually need to search for ;_;`")
+    	await event.edit("`Please mention what I actually need to search for!`")
     	return
         
     lim = findall(r"lim=\d+", query)
