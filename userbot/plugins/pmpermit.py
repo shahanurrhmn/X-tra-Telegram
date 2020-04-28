@@ -12,10 +12,10 @@ CACHE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet, check pinned message in** @XtraTgBot"
-USER_BOT_WARN_ZERO = "`Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @Shahanur_Personal_bot .`"
+USER_BOT_WARN_ZERO = "`Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @shahanur_personal_bot .`"
 USER_BOT_NO_WARN = ("`Hey Dear, Currently I do not accept pms from strangers.But you have found your way here to me,`"
                     f"{DEFAULTUSER}'s` inbox.\n\n"
-                    "Please tag me in any common group or send your messages here @Shahanur_Personal_bot .`\n\n")
+                    "Please tag me in any common group or send your messages here @shahanur_personal_bot .`\n\n")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -66,7 +66,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("`Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @Shahanur_Personal_bot .`")
+                await event.edit("`Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @shahanur_personal_bot .`")
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
