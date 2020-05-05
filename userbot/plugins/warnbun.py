@@ -9,7 +9,7 @@ from userbot.utils import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "`You Have  1/3  warnings...\nWatch out!....\nReason for warn: Porn Demand`"
+    mentions = "`You Have  1/3  warnings...\nWatch out!....\nReason for warn: Not mentioned by the Admin!`"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -32,7 +32,7 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "`You Have  2/3  warnings...\nWatch out!....\nReason for last warn: Porn Demand`"
+    mentions = "`You Have  2/3  warnings...\nWatch out!....\nReason for last warn: Not mentioned by the Admin!`"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -55,7 +55,7 @@ from uniborg.util import admin_cmd
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "`You Have  3/3  warnings...\nBanned!!!....\nReason for ban: Porn Demand`"
+    mentions = "`You Have  3/3  warnings...\nBanned!!!....\nReason for ban: Not mentioned by the Admin!`"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
@@ -95,7 +95,7 @@ async def _(event):
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "**Warning..\n\nBattery Below 10%, Please Charge Your Phone**"
+    mentions = "**Warning..\n\nBattery Below 10%, Please Charge Your Phone 😒**"
     chat = await event.get_input_chat()
     async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
