@@ -2,10 +2,9 @@ from telethon import events
 import subprocess
 import asyncio
 import time
-from userbot.utils import admin_cmd
 
-#@command(pattern="^.cmds", outgoing=True)
-@borg.on(admin_cmd(pattern=r"cmds", allow_sudo=True))
+
+@command(pattern="^.cmds", outgoing=True)
 async def install(event):
     if event.fwd_from:
         return
@@ -17,5 +16,5 @@ async def install(event):
     o = stdout.decode()
     _o = o.split("\n")
     o = "\n".join(_o)
-    OUTPUT = f"**List of Plugins:**\n{o}\n\n**TIP:** __If you want to know the commands for a plugin, do:-__ \n `.help <plugin name>` **without the < > brackets.**\n__All plugins might not work directly. Visit__ @Gujju_Bot_Support_1 __for assistance.__"
+    OUTPUT = f"**List of Plugins:**\n{o}\n\n**TIP:** __If you want to know the commands for a plugin, do:-__ \n `.help <plugin name>` **without the < > brackets.**\n__All plugins might not work directly. Visit__ @XtraTgChat __for assistance.__"
     await event.edit(OUTPUT)
