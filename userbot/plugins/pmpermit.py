@@ -12,10 +12,12 @@ CACHE = {}
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet, check pinned message in** @XtraTgBot"
-USER_BOT_WARN_ZERO = "`Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @shahanurrhmnBot.`"
+USER_BOT_WARN_ZERO = "Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @shahanurrhmnBot.\n\n"
 USER_BOT_NO_WARN = ("`Hey There, Unfortunately I do not accept pms from strangers.`\n\n"
 
+
                     "Please tag me in any common group or send your messages here @shahanurrhmnBot.\n\n")
+
 
 
 if Var.PRIVATE_GROUP_ID is not None:
@@ -35,7 +37,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                     await PREV_REPLY_MESSAGE[chat.id].delete()
                     del PREV_REPLY_MESSAGE[chat.id]
                 pmpermit_sql.approve(chat.id, reason)
-                await event.edit("Approved User [{}](tg://user?id={})".format(firstname, chat.id))
+                await event.edit("Approved pm of the User [{}](tg://user?id={})".format(firstname, chat.id))
                 await asyncio.sleep(3)
                 await event.delete()
 
@@ -66,7 +68,7 @@ if Var.PRIVATE_GROUP_ID is not None:
         if event.is_private:
             if pmpermit_sql.is_approved(chat.id):
                 pmpermit_sql.disapprove(chat.id)
-                await event.edit("`Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @shahanurrhmnBot.`")
+                await event.edit(" Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @shahanurrhmnBot.\n\n")
                 await asyncio.sleep(3)
                 await event.client(functions.contacts.BlockRequest(chat.id))
 
