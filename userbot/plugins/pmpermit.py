@@ -19,6 +19,7 @@ USER_BOT_NO_WARN = ("`Hey There, Unfortunately I do not accept pms from stranger
                     "Please tag me in any common group or send your messages here @shahanurrhmnBot.\n\n")
 
 
+
 if Var.PRIVATE_GROUP_ID is not None:
     @command(pattern="^.approve ?(.*)")
     async def approve_p_m(event):
