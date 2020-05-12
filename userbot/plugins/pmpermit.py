@@ -13,7 +13,7 @@ CACHE = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet, check pinned message in** @XtraTgBot"
 USER_BOT_WARN_ZERO = "`Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @shahanurrhmnBot.`"
-USER_BOT_NO_WARN = ("`Hey There, Unfortunately I do not accept pms from strangers.`")
+USER_BOT_NO_WARN = ("`Hey There, Unfortunately I do not accept pms from strangers.`"
 
                     "Please tag me in any common group or send your messages here @shahanurrhmnBot.\n\n")
 
