@@ -15,9 +15,9 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "**No name set yet, check pinne
 USER_BOT_WARN_ZERO = "Sorry for the inconvenience, You are blocked to send me further messages as you were sending too many messages without having proper authorization, For anything important please send here @shahanurrhmnBot.\n\n"
 USER_BOT_NO_WARN = ("`Hey There, Unfortunately I do not accept private messages from strangers anymore.`\n\n"
 
+                    "`𝗣𝗹𝗲𝗮𝘀𝗲 𝗱𝗼 𝗻𝗼𝘁 𝘀𝗽𝗮𝗺 𝘄𝗶𝘁𝗵 𝗺𝘂𝗹𝘁𝗶𝗽𝗹𝗲 𝗺𝗲𝘀𝘀𝗮𝗴𝗲𝘀 𝗲𝗹𝘀𝗲 𝘆𝗼𝘂 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗯𝗹𝗼𝗰𝗸𝗲𝗱 𝗮𝗻𝗱 𝗿𝗲𝗽𝗼𝗿𝘁𝗲𝗱 𝗮𝘀 𝘀𝗽𝗮𝗺 𝗯𝘆 𝘁𝗵𝗲 𝗯𝗼𝘁 𝗮𝘂𝘁𝗼𝗺𝗮𝘁𝗶𝗰𝗮𝗹𝗹𝘆.`\n\n"
 
-                    "Please tag me in any common group or send your messages here @shahanurrhmnBot.\n\n")
-
+                    "You can tag me in any common group or send your messages here @shahanurrhmnBot.\n\n")
 
 
 if Var.PRIVATE_GROUP_ID is not None:
